@@ -1,0 +1,265 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/11/2024  16:47:46  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\trafficlight PRINT (.\Listings\trafficlight.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?SIDIV)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?UIDIV)
+
+
+LINK MAP OF MODULE:  .\Objects\trafficlight (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0016H     UNIT         ?DT?MAIN
+            IDATA   001EH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     009FH     UNIT         ?PR?DISPLAY_REDY_GREENX?MAIN
+            CODE    089FH     0096H     UNIT         ?PR?PROGRAM?MAIN
+            CODE    0935H     0092H     UNIT         ?PR?_DELAY_MS?MAIN
+            CODE    09C7H     008CH     UNIT         ?C_C51STARTUP
+            CODE    0A53H     008BH     UNIT         ?C?LIB_CODE
+            CODE    0ADEH     0011H     UNIT         ?PR?MAIN?MAIN
+            CODE    0AEFH     000DH     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\trafficlight (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN
+  +--> ?PR?DISPLAY_REDY_GREENX?MAIN
+
+?PR?DISPLAY_REDY_GREENX?MAIN
+  +--> ?PR?_DELAY_MS?MAIN
+  +--> ?PR?PROGRAM?MAIN
+
+?PR?PROGRAM?MAIN
+  +--> ?PR?_DELAY_MS?MAIN
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/11/2024  16:47:46  PAGE 2
+
+
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\trafficlight (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:0008H         PUBLIC        maled
+  D:0012H         PUBLIC        donvix
+  D:0014H         PUBLIC        donviy
+  D:0016H         PUBLIC        chucx
+  D:0018H         PUBLIC        chucy
+  C:0ADEH         PUBLIC        main
+  B:00A0H.5       PUBLIC        REDX
+  B:0090H.5       PUBLIC        REDY
+  B:00A0H.7       PUBLIC        YELLOWX
+  B:0090H.7       PUBLIC        YELLOWY
+  C:0800H         PUBLIC        display_REDY_GREENX
+  B:00A0H.6       PUBLIC        GREENX
+  B:0090H.6       PUBLIC        GREENY
+  C:09A7H         PUBLIC        _delay_ms
+  B:00A0H.3       PUBLIC        clk1
+  B:00A0H.4       PUBLIC        clk2
+  B:00A0H.2       PUBLIC        clk3
+  B:00A0H.1       PUBLIC        clk4
+  D:001AH         PUBLIC        x
+  D:001CH         PUBLIC        y
+  C:089FH         PUBLIC        program
+  C:096FH         SYMBOL        L?0041
+  -------         PROC          L?0040
+  -------         ENDPROC       L?0040
+  C:096FH         SYMBOL        L?0041
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        times
+  -------         DO            
+  D:0004H         SYMBOL        x
+  D:0002H         SYMBOL        y
+  -------         ENDDO         
+  C:09A7H         LINE#         28
+  C:09A7H         LINE#         29
+  C:09A7H         LINE#         31
+  C:09B1H         LINE#         32
+  C:09B1H         LINE#         33
+  C:09BFH         LINE#         34
+  C:09C6H         LINE#         35
+  -------         ENDPROC       _DELAY_MS
+  -------         PROC          DISPLAY_REDY_GREENX
+  C:0800H         LINE#         40
+  C:0800H         LINE#         41
+  C:0800H         LINE#         42
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/11/2024  16:47:46  PAGE 3
+
+
+  C:0818H         LINE#         43
+  C:0818H         LINE#         44
+  C:081CH         LINE#         45
+  C:0820H         LINE#         46
+  C:0822H         LINE#         48
+  C:0822H         LINE#         49
+  C:0822H         LINE#         50
+  C:0822H         LINE#         51
+  C:0822H         LINE#         53
+  C:0822H         LINE#         54
+  C:0822H         LINE#         55
+  C:0822H         LINE#         56
+  C:0822H         LINE#         57
+  C:0822H         LINE#         58
+  C:0822H         LINE#         61
+  C:0822H         LINE#         62
+  C:0822H         LINE#         63
+  C:0822H         LINE#         64
+  C:0822H         LINE#         65
+  C:0822H         LINE#         66
+  C:0822H         LINE#         68
+  C:0825H         LINE#         70
+  C:082BH         LINE#         71
+  C:082BH         LINE#         72
+  C:082FH         LINE#         73
+  C:0833H         LINE#         74
+  C:0837H         LINE#         76
+  C:083CH         LINE#         77
+  C:083CH         LINE#         78
+  C:084FH         LINE#         79
+  C:085EH         LINE#         80
+  C:0862H         LINE#         81
+  C:0862H         LINE#         85
+  C:0862H         LINE#         86
+  C:0862H         LINE#         87
+  C:0862H         LINE#         88
+  C:0862H         LINE#         89
+  C:0862H         LINE#         90
+  C:0862H         LINE#         93
+  C:0862H         LINE#         94
+  C:0862H         LINE#         95
+  C:0862H         LINE#         96
+  C:0862H         LINE#         97
+  C:0862H         LINE#         98
+  C:0862H         LINE#         99
+  C:0865H         LINE#         100
+  C:086BH         LINE#         101
+  C:086BH         LINE#         102
+  C:086EH         LINE#         103
+  C:086EH         LINE#         106
+  C:087FH         LINE#         107
+  C:087FH         LINE#         108
+  C:089EH         LINE#         109
+  -------         ENDPROC       DISPLAY_REDY_GREENX
+  -------         PROC          MAIN
+  C:0ADEH         LINE#         111
+  C:0ADEH         LINE#         112
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/11/2024  16:47:46  PAGE 4
+
+
+  C:0ADEH         LINE#         114
+  C:0AE2H         LINE#         115
+  C:0AE6H         LINE#         116
+  C:0AEAH         LINE#         118
+  C:0AEAH         LINE#         119
+  C:0AEAH         LINE#         120
+  C:0AEDH         LINE#         121
+  -------         ENDPROC       MAIN
+  -------         PROC          PROGRAM
+  C:089FH         LINE#         125
+  C:089FH         LINE#         126
+  C:089FH         LINE#         127
+  C:08B7H         LINE#         128
+  C:08B7H         LINE#         129
+  C:08BBH         LINE#         130
+  C:08BFH         LINE#         131
+  C:08C1H         LINE#         133
+  C:08C1H         LINE#         134
+  C:08C1H         LINE#         135
+  C:08C1H         LINE#         136
+  C:08C1H         LINE#         138
+  C:08C1H         LINE#         139
+  C:08C1H         LINE#         140
+  C:08C1H         LINE#         141
+  C:08C1H         LINE#         142
+  C:08C1H         LINE#         143
+  C:08C1H         LINE#         146
+  C:08C1H         LINE#         147
+  C:08C1H         LINE#         148
+  C:08C1H         LINE#         149
+  C:08C1H         LINE#         150
+  C:08C1H         LINE#         151
+  C:08C1H         LINE#         153
+  C:08C4H         LINE#         155
+  C:08CAH         LINE#         156
+  C:08CAH         LINE#         157
+  C:08CEH         LINE#         158
+  C:08D2H         LINE#         159
+  C:08D6H         LINE#         161
+  C:08DBH         LINE#         162
+  C:08DBH         LINE#         164
+  C:08EEH         LINE#         165
+  C:08FDH         LINE#         166
+  C:0901H         LINE#         167
+  C:0901H         LINE#         169
+  C:0901H         LINE#         170
+  C:0901H         LINE#         171
+  C:0901H         LINE#         172
+  C:0901H         LINE#         173
+  C:0901H         LINE#         174
+  C:0901H         LINE#         177
+  C:0901H         LINE#         178
+  C:0901H         LINE#         179
+  C:0901H         LINE#         180
+  C:0901H         LINE#         181
+  C:0901H         LINE#         182
+  C:0901H         LINE#         184
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/11/2024  16:47:46  PAGE 5
+
+
+  C:0904H         LINE#         186
+  C:0915H         LINE#         188
+  C:0915H         LINE#         189
+  C:0934H         LINE#         190
+  -------         ENDPROC       PROGRAM
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?SIDIV
+  C:0A53H         PUBLIC        ?C?SIDIV
+  -------         ENDMOD        ?C?SIDIV
+
+  -------         MODULE        ?C?UIDIV
+  C:0A89H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 01E4H BYTE (23%) *
+******************************************************************************
+
+Program Size: data=31.0 xdata=0 code=767
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
